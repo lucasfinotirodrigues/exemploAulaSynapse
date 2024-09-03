@@ -1,0 +1,10 @@
+<svg width="50" height="45" viewBox="0 0 50 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon-ervas">
+<path id="Vector" d="M2 0H42V40H2V0Z" fill="white" fill-opacity="0.01"/>
+<g id="Group">
+<path id="Vector_2" d="M25 9C20.7419 13.1743 18.1 18.9913 18.1 25.4253C18.1 26.0008 18.1212 26.5714 18.1627 27.1364C22.3841 31.3062 25 37.0976 25 43.5C25 37.0976 27.6158 31.3062 31.8372 27.1364C31.8787 26.5714 31.8999 26.0008 31.8999 25.4253C31.8999 18.9913 29.258 13.1743 25 9Z" fill="#0073CE" fill-opacity="0.1" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M2 20.5C2 33.2026 12.2973 43.5 24.9997 43.5C24.9997 37.0976 22.3839 31.3062 18.1625 27.1364C14.0086 23.0331 8.3001 20.5 2 20.5Z" fill="#0073CE" fill-opacity="0.1" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M47.9997 20.5C47.9997 33.2026 37.7024 43.5 25 43.5C25 37.0976 27.6159 31.3062 31.8372 27.1364C35.9911 23.0331 41.6997 20.5 47.9997 20.5Z" fill="#0073CE" fill-opacity="0.1" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

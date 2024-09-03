@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon-Sol">
+<path id="Vector" d="M0 0H48V48H0V0Z" fill="white" fill-opacity="0.01"/>
+<path id="Vector_2" d="M24 3V6.15" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M38.849 9.15073L36.6217 11.3781" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M45 24H41.85" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M38.849 38.8491L36.6217 36.6218" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M24 45V41.85" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M9.15088 38.8491L11.3782 36.6218" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M3 24H6.15" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Group">
+<path id="Vector_9" d="M9.15088 9.15073L11.3782 11.3781" stroke="#0073CE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_10" d="M24 36C30.6274 36 36 30.6274 36 24C36 17.3726 30.6274 12 24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36Z" fill="#0073CE" fill-opacity="0.1" stroke="#0073CE" stroke-width="3" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>
