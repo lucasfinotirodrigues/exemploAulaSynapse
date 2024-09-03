@@ -1,105 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!--Cabeçalho-->
     <header>
-        <nav className="navbar">
-            <div className="info">
-              <img className='logo' src={logo} alt="" srcSet="" />
-              <h3>FarmaDelivery</h3>
+        <!--Menu de navegação-->
+        <nav class="navbar">
+            <div class="info">
+                <img class='logo' src="images/Logo-White.svg" alt="" srcSet="" />
+                <h3>FarmaDelivery</h3>
             </div>
-            <ul className={`nav-list ${showMenu ? 'show' : ''}`}>
-              <li>
-                <img src={home} alt="" />
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <img src={avaliacoes} alt="" />
-                <Link to="/avaliacoes">Avaliações</Link>
-              </li>
-              <li>
-                <img src={cadastrar} alt="" />
-                <Link to="/cadastro">Cadastrar</Link>
-              </li>
-              <li>
-                <img src={entrar} alt="" />
-                <Link to="/login">Entrar</Link>
-              </li>
-              <li>
-                <Link to="/carrinho">
-                  <img src={carrinho} alt="" />
-                </Link>
-              </li>
+            <ul class="nav-list">
+                <li>
+                    <img src="images/home.svg" alt="" />
+                    <p>Home</p>
+                </li>
+                <li>
+                    <img src="images/star.svg" alt="" />
+                    <p>Avaliação</p>
+                </li>
+                <li>
+                    <img src="images/user.svg" alt="" />
+                    <p>Cadastrar</p>
+                </li>
+                <li>
+                    <img src="images/login.svg" alt="" />
+                    <p>Entrar</p>
+                </li>
+                <li>
+                    <img src="images/carrinho.svg" alt="" />
+                </li>
             </ul>
-            <div className="burger-menu" onClick={toggleMenu}>&#9776;</div>
-          </nav>
+        </nav>
     </header>
-
-
-    <div>
-        <div className='estrutura'>
-        <Navbar></Navbar>
-        <div className='content'>
-            <div className="message">
-                <h2>"Entregamos a seu medicamento onde você<br/>estiver,  pois a sua saúde não pode esperar!"</h2>
-                <button className='button-login'>                     
-                    <Link to="/login">Entrar</Link>
-                </button>
+    <!--Conteúdo geral da página-->
+    <div class='estrutura'>
+        <!--Sessão mensagem-->
+        <section id="content" class='content'>
+            <div class="message">
+                <h2>"Entregamos a seu medicamento onde você<br />estiver, pois a sua saúde não pode esperar!"</h2>
+                <button class='button-login'>Entrar</button>
             </div>
-        </div>
-        <div className="filters">
-        {images.map((image, index) => (
-            <div className="group" key={index}>
-            <div className="icon">
-                <img className='icon-img' src={image.src} alt={image.text} />
-            </div>                
-            <p className='text'>{image.text}</p>
+        </section>
+        <!--Sessão filtros-->
+        <section id="filters" class="filters">
+            <div class="group">
+                <div class="icon">
+                    <img class='icon-img' src="images/Icon-muscle.svg" alt="Ícones Filtro" />
+                </div>
+                <p class='text'>Medicamentos</p>
             </div>
-        ))}
-        </div>
-        <div className="cards">
-            <h3 className="title">Análgésico</h3>
-            <div className="grupo">
-            {analgesico.map((analgesico, index) => (
-                <div className="card" key={index}>
-                <div className="heart">
-                    <img className='coracao' src={coracaoOutline}/>
+            <div class="group">
+                <div class="icon">
+                    <img class='icon-img' src="images/Icon-remedio.svg" alt="Ícones Filtro" />
                 </div>
-                <img className='remedio' src={analgesico.src}/>
-                <p className="preco">{analgesico.preco}</p>
-                <p className="nome">{analgesico.nome}</p>
-                <button className='button compra'>
-                    <Link to="/compras">Comprar</Link>
-                </button>
-                </div>
-            ))}
+                <p class='text'>Vitaminas</p>
             </div>
-        </div>
-        <div className="cards">
-            <h3 className="title">Anti-inflamatórios</h3>
-            <div className="grupo">
-            {antiInflamatorio.map((antiInflamatorio, index) => (
-                <div className="card" key={index}>
-                <div className="heart">
-                    <img className='coracao' src={coracaoOutline}/>
+            <div class="group">
+                <div class="icon">
+                    <img class='icon-img' src="images/Icon-sol.svg" alt="Ícones Filtro" />
                 </div>
-                <img className='remedio' src={antiInflamatorio.src}/>
-                <p className="preco">{antiInflamatorio.preco}</p>
-                <p className="nome">{antiInflamatorio.nome}</p>
-                <button className='button compra'>
-                    <Link to="/compras">Comprar</Link>
-                </button>
-                </div>
-            ))}
+                <p class='text'>Protetores</p>
             </div>
-        </div>
-        <Rodape></Rodape>
-        </div>
+            <div class="group">
+                <div class="icon">
+                    <img class='icon-img' src="images/Icon-mamadeira.svg" alt="Ícones Filtro" />
+                </div>
+                <p class='text'>Infantis</p>
+            </div>
+            <div class="group">
+                <div class="icon">
+                    <img class='icon-img' src="images/Icon-aparelhos.svg" alt="Ícones Filtro" />
+                </div>
+                <p class='text'>Aparelhos</p>
+            </div>
+            <div class="group">
+                <div class="icon">
+                    <img class='icon-img' src="images/Icon-ervas.svg" alt="Ícones Filtro" />
+                </div>
+                <p class='text'>Naturais</p>
+            </div>
+        </section>
+        <!--Sessão cards Analgésico-->
+        <section id="cards-analgésicos">
+            <div class="cards">
+                <!--Título-->
+                <h3 class="title">Analgésico</h3>
+                <!--Grupo de cards-->
+                <div class="grupo">
+                    <!--Analgésico 1-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/Analgésico.png" alt="Imagem remédio" />
+                        <p class="preco">R$18,50</p>
+                        <p class="nome">Novalgina 500 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 2-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/Analgésico2.png" alt="Imagem remédio" />
+                        <p class="preco">R$6,99</p>
+                        <p class="nome">Dorflex 300 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 3-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/Analgésico3.png" alt="Imagem remédio" />
+                        <p class="preco">R$22.90</p>
+                        <p class="nome">Cronidor 40 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 4-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/Analgésico4.png" alt="Imagem remédio" />
+                        <p class="preco">R$19,90</p>
+                        <p class="nome">Advil mulher 400 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 5-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/Analgésico5.png" alt="Imagem remédio" />
+                        <p class="preco">R$35,50</p>
+                        <p class="nome">Tylenol 750 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sessão cards Antiflamatórios-->
+        <section id="cards-antiflamatorios">
+            <div class="cards">
+                <!--Título-->
+                <h3 class="title">Analgésico</h3>
+                <!--Grupo de cards-->
+                <div class="grupo">
+                    <!--Analgésico 1-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/AntiFlamatorio.png" alt="Imagem remédio" />
+                        <p class="preco">R$42,90</p>
+                        <p class="nome">Alivium 600 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 2-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/AntiFlamatorio2.png" alt="Imagem remédio" />
+                        <p class="preco">R$44,90</p>
+                        <p class="nome">AdvilPRO 30 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 3-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/AntiFlamatorio3.png" alt="Imagem remédio" />
+                        <p class="preco">R$6,99</p>
+                        <p class="nome">Nimesulida 100 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 4-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/AntiFlamatorio4.png" alt="Imagem remédio" />
+                        <p class="preco">R$19,90</p>
+                        <p class="nome">Ibuprofeno 400 mg'</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                    <!--Analgésico 5-->
+                    <div class="card">
+                        <div class="heart">
+                            <img class='coracao' src="images/Icon-coracao-outline.svg" alt="Icone coração" />
+                        </div>
+                        <img class="remedio" src="images/AntiFlamatorio5.png" alt="Imagem remédio" />
+                        <p class="preco">R$15,50</p>
+                        <p class="nome">Ibupril 400 mg</p>
+                        <button class="button compra">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    <!--Rodapé-->
+    <footer>
+        <h4>FarmaDelivery</h4>
+        <h4>Copyright © 2023</h4>
+    </footer>
 </body>
 </html>

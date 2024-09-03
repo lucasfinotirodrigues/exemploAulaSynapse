@@ -1,3 +1,141 @@
+/*Importando a fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*Declaração de variáveis*/
+
+:root {
+    /*Cores*/
+    --color-dark: #002440;
+    --color-primary: #0073CE;
+    --color-secondary: #00A5F0;
+    --color-secondary-opacity:#00a4f023;
+    --color-tertiary: #00D7D7;
+    --color-compound: #FFC800;
+    --color-compound-hover: #e6b400;
+    --color-gradient: linear-gradient(99deg, #00A5F0 7.94%, #00D7D7 95.32%);
+    --color-gray-700: #7B7B7B;
+    --color-gray-600: #33303E;
+    --color-gray-500: #4E4B59;
+    --color-gray-400: #5F5C6B;
+    --color-gray-300: #7A7786;
+    --color-gray-200: #C6C5CE;
+    --color-gray-100: #F1F0F5;
+    --color-white: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Títulos e texto*/
+h1, h2, h3, h4, .paragraph1, .paragraph2, .paragraph3 {
+    color: var(--color-gray-500);
+    font-style: normal;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.paragraph1, .paragraph2, .paragraph3 {
+    font-weight: 400;
+}
+
+.paragraph1 {
+    font-size: 18px;
+}
+
+.paragraph2 {
+    font-size: 16px;
+}
+
+.paragraph3 {
+    font-size: 14px;
+}
+
+/*Denifição de estilos globais*/
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.label {
+    color: var(--color-gray-700);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+input {
+    width: 360px;
+    height: 40px;
+    flex-shrink: 0; 
+    border-radius: 5px;
+    border: 3px solid #D9D9D9;
+    background: #FFF;
+}
+
+.content {
+    background-color: var(--color-white);
+}
+
+.estrutura{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button {
+    cursor: pointer;
+    width: 200px;
+    height: 42px;
+    padding: 4px;
+    border:none;
+    border-radius: 5px;
+    background: var(--color-compound);
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 600;
+   
+}
+
+.button:hover {
+    transition: .3s;
+    background-color: var(--color-compound-hover);
+}
+
+@media screen and (max-width: 560px) {
+    .button {
+        width: 142px;
+        height: 28px;
+        font-size: 14px;
+        font-weight: 500;
+    }   
+}
+
+
 /*Navabar*/
 
 nav {
@@ -59,42 +197,6 @@ li {
     padding: 20px;
   }
   
-  /* Media Query para tornar o menu responsivo */
-  @media (max-width: 1024px) {
-    .nav-list {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background-color: var(--color-secondary);
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    .nav-list a {
-        color: var(--color-white);
-    }
-
-    .nav-list.show {
-      display: flex;
-    }
-  
-    .nav-list li {
-      margin: 10px 0;
-    }
-  
-    .burger-menu {
-      display: block;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    nav {
-      padding: 0 32px;
-    }
-  }
 
 
 /*Primeira seção*/
@@ -152,6 +254,7 @@ h2 {
 }
 
 .icon-img{
+    cursor: pointer;
     width: 72px;
     height: 48px;
 }
@@ -178,6 +281,8 @@ h2 {
     height: 42px;
     border:none;
     border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
     background: var(--color-compound);
     color: var(--color-white)
 }
@@ -193,7 +298,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 320px;
+    height: 328px;
     border-radius: 8px;
     padding: 16px 16px 20px 16px;
     background: var(--color-white);
@@ -282,4 +387,21 @@ a {
     .button {
         width: 120px;
     }
+}
+
+
+/*Footer*/
+
+footer {
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+    height: 94px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+h4 {
+    color: var(--color-white);
 }
