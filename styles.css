@@ -1,0 +1,285 @@
+/*Navabar*/
+
+nav {
+    background-color: var(--color-secondary);
+    height: 94px;
+    padding: 0 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+}
+
+
+li {
+    color: var( --color-white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+ }
+
+
+.info{
+  display: flex;
+  align-items: center;
+  gap:8px
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap:12px;
+  }
+  
+  .nav-list li {
+    margin-right: 20px;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: var( --color-white);
+    font-size: 20px;
+    font-weight: 400;
+   }
+
+   h3{
+    color: var( --color-white);
+    font-weight: 700;
+   }
+  
+  .burger-menu {
+    color: var(--color-white);
+    font-size: 2.25rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  /* Media Query para tornar o menu responsivo */
+  @media (max-width: 1024px) {
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-secondary);
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .nav-list a {
+        color: var(--color-white);
+    }
+
+    .nav-list.show {
+      display: flex;
+    }
+  
+    .nav-list li {
+      margin: 10px 0;
+    }
+  
+    .burger-menu {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      padding: 0 32px;
+    }
+  }
+
+
+/*Primeira seção*/
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 86px 68px;
+
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    height: 270px;
+    max-width: 2000px;
+    width: 100%;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #00A5F0 1.25%, #00D7D7 100%);
+}
+
+h2 {
+    color: var(--color-white);
+    padding: 0 90px;    
+    text-align: center;
+}
+
+/*Segunda seção*/
+.filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 68px 86px 68px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
+    background: rgba(0, 115, 206, 0.10);
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-img{
+    width: 72px;
+    height: 48px;
+}
+
+.text {
+    color: var(--color-gray-700);
+    font-size: 16px;
+    font-weight: 500;}
+
+/*Terceira seção*/
+
+.grupo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards{
+    padding: 0 68px 86px 68px;
+}
+
+.button-login {
+    width: 200px;
+    height: 42px;
+    border:none;
+    border-radius: 5px;
+    background: var(--color-compound);
+    color: var(--color-white)
+}
+
+.title{
+    color: var(--color-dark);
+    font-size: 24px;
+    font-weight: 700;    
+    margin-bottom: 36px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 320px;
+    border-radius: 8px;
+    padding: 16px 16px 20px 16px;
+    background: var(--color-white);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20), -2px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.heart{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.coracao {
+    cursor: pointer
+}
+
+.remedio { 
+    margin-bottom: 32px;
+}
+
+.preco {
+    color: var(--color-dark);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.nome {
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 1024px){
+    h2 {
+        font-size: 28px;
+        padding: 0 42px;         
+    }
+    .grupo {        
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content{
+        padding: 86px 32px;
+    }
+
+    .filters, .cards{
+        padding:  0 32px 86px 32px;
+    }
+
+    .message {
+        height: 160px;
+        gap: 32px;
+    }
+    
+    h2 {
+        font-size: 20px;
+        padding: 0 18px;     
+    }
+}
+
+@media screen and (max-width:560px) {
+    .grupo {
+        justify-content: center;
+    }
+    
+    .card {
+        width: 300px;
+        height: 424px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    h2 {
+        font-size: 18px;   
+    }
+
+    .button {
+        width: 120px;
+    }
+}

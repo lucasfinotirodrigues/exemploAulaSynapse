@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav className="navbar">
+            <div className="info">
+              <img className='logo' src={logo} alt="" srcSet="" />
+              <h3>FarmaDelivery</h3>
+            </div>
+            <ul className={`nav-list ${showMenu ? 'show' : ''}`}>
+              <li>
+                <img src={home} alt="" />
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <img src={avaliacoes} alt="" />
+                <Link to="/avaliacoes">Avaliações</Link>
+              </li>
+              <li>
+                <img src={cadastrar} alt="" />
+                <Link to="/cadastro">Cadastrar</Link>
+              </li>
+              <li>
+                <img src={entrar} alt="" />
+                <Link to="/login">Entrar</Link>
+              </li>
+              <li>
+                <Link to="/carrinho">
+                  <img src={carrinho} alt="" />
+                </Link>
+              </li>
+            </ul>
+            <div className="burger-menu" onClick={toggleMenu}>&#9776;</div>
+          </nav>
+    </header>
+
+
+    <div>
+        <div className='estrutura'>
+        <Navbar></Navbar>
+        <div className='content'>
+            <div className="message">
+                <h2>"Entregamos a seu medicamento onde você<br/>estiver,  pois a sua saúde não pode esperar!"</h2>
+                <button className='button-login'>                     
+                    <Link to="/login">Entrar</Link>
+                </button>
+            </div>
+        </div>
+        <div className="filters">
+        {images.map((image, index) => (
+            <div className="group" key={index}>
+            <div className="icon">
+                <img className='icon-img' src={image.src} alt={image.text} />
+            </div>                
+            <p className='text'>{image.text}</p>
+            </div>
+        ))}
+        </div>
+        <div className="cards">
+            <h3 className="title">Análgésico</h3>
+            <div className="grupo">
+            {analgesico.map((analgesico, index) => (
+                <div className="card" key={index}>
+                <div className="heart">
+                    <img className='coracao' src={coracaoOutline}/>
+                </div>
+                <img className='remedio' src={analgesico.src}/>
+                <p className="preco">{analgesico.preco}</p>
+                <p className="nome">{analgesico.nome}</p>
+                <button className='button compra'>
+                    <Link to="/compras">Comprar</Link>
+                </button>
+                </div>
+            ))}
+            </div>
+        </div>
+        <div className="cards">
+            <h3 className="title">Anti-inflamatórios</h3>
+            <div className="grupo">
+            {antiInflamatorio.map((antiInflamatorio, index) => (
+                <div className="card" key={index}>
+                <div className="heart">
+                    <img className='coracao' src={coracaoOutline}/>
+                </div>
+                <img className='remedio' src={antiInflamatorio.src}/>
+                <p className="preco">{antiInflamatorio.preco}</p>
+                <p className="nome">{antiInflamatorio.nome}</p>
+                <button className='button compra'>
+                    <Link to="/compras">Comprar</Link>
+                </button>
+                </div>
+            ))}
+            </div>
+        </div>
+        <Rodape></Rodape>
+        </div>
+    </div>
+</body>
+</html>
